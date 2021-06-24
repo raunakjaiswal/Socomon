@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(68, 67, 67);
+  }
+  
+  .main-container {
+    width: 50%;
+    margin: 3rem auto;
+    /* height: 400px; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+  }
+  
+  .cont1 {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #fashion {
+      border: 0.5px solid #c7def7;
+    background: #3595f0;
+  }
+  
+  #art {
+    border: 0.5px solid #c7def7;
+    background: #e6147d;
+  }
+  
+  #photography {
+    border: 0.5px solid #c7def7;
+    background: #ee1242;
+  }
+  
+  #quotes {
+    border: 0.5px solid #c7def7;
+    background: #d85d0b;
+  }
+  
+  .inner-box {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: #ff79cd; */
+  }
+  
+  .show {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .blog-cont {
+    margin-left: 10px;
+    margin-right: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 400px;
+    width: 400px;
+    border: 1px solid #cacaca;
+    background-color:  #c7def7;
+  }
+  
+  .blog-cont img {
+    width: 100%;
+    max-height: 250px;
+  }
+  
+  .blog-cont h1 {
+    padding: 2rem 1rem 1rem 1rem;
+    font-size: 1.4rem;
+  }
+  
+  .blog-cont p {
+    padding: 1rem;
+  }
+  
+  .loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+    display: none;
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

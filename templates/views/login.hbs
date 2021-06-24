@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Socomon</title>
+<link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body bgcolor = "#000033">
+
+{{!-- {{>navbar}} --}}
+<form action="/auth/login" method="POST">
+<h2>Login Form</h2>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>   
+    <button type="submit">Login</button>
+  <hr>
+  <h4>If you haven't register yet, Please register.</h4> 
+    <button type="button" class="Register" onclick="document.location='/register'">Register</button>
+</form>
+{{#if message}}
+   <h1>{{message}}</h1>
+
+{{/if}}
+</body>
+</html>

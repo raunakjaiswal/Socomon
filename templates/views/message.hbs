@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/message.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <title>Socomon</title>
+</head>
+<body bgcolor="#f4f4f9">
+   
+    <div class="bigbox">
+        <div class="smallbox1">
+            <div class="header1">
+                 <img class="profile_img" src="/img/default.jpg"/>
+                 <p class="username">{{userName}}</p>
+            </div>
+            <div class="header2">
+                {{#each chatfriend}}
+                <div class="hov1" onclick="openmessage(this,{{../userid}},{{this.message_id}},{{json this.user_name}},{{this.friend_id}})">
+                     <img class="profile_img" src="/img/default.jpg"/>
+                    <p class="hov1-p" >{{this.user_name}} </p>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="smallbox2">
+            {{!-- <section class="chat_section"> --}}
+        <div class="brand">
+            <h1>Socomon</h1>
+
+        </div>
+
+        <div class="message_area" >   
+
+         
+        </div>
+
+        <div class="message-text">
+            <textarea  id="textarea" cols="30" rows="1" placeholder="write a message...."></textarea>
+            <button onclick="sendmessage({{json userName}},{{userid}})">send</button>
+        </div>
+     {{!-- </section> --}}
+        </div>
+    </div>
+    {{!-- <script src="js/message.js"></script> --}}
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+
+    <script src="/js/message.js"></script>
+</body>
+</html>

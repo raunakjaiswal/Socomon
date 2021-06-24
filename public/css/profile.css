@@ -1,0 +1,904 @@
+
+*
+{
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+/* body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+  /* height: 100%; */
+
+.navprofile .arrow {
+  height: 50px;
+  /* background-color: blanchedalmond; */
+  background-color: #181d22;
+}
+.navprofile {
+  background-color: rgb(105, 105, 105);
+  height: 300px;
+}
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.circular--landscape img {
+  /* width: auto; */
+  vertical-align: middle;
+  height: 100%;
+  /* margin-left: 1px; */
+  width: 100%;
+
+  /* margin-left: -50px; */
+}
+.belowarraw {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 250px;
+}
+li {
+  list-style: none;
+}
+.username {
+  /* color: rgb(255, 0, 255); */
+  color: #c7def7;
+  text-align: center;
+}
+.button7 {
+  background-color: rgb(78, 78, 78); /* Green */
+  border: none;
+  color:  #c7def7;
+  padding: 17px;
+  height: 10px;
+  text-align: center;
+  text-decoration: none;
+  float: left;
+   padding-top: 7px; 
+  
+  margin-top: 10px;
+  margin-left: 10px;
+  /* margin-bottom: 10px; */
+  /* align-items: center;
+  justify-content: center; */
+}
+.username h1{
+  margin: 0px;
+}
+
+.button1 {
+  margin: 10px 15px;
+}
+
+.friend {
+  float: left;
+  width: auto;
+  align-self: center;
+  margin: 20px;
+  margin-top: 25px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: rgb(78, 78, 78);
+  align-items: center;
+}
+
+.row {
+  margin: auto;
+  display: table;
+  align-items: center;
+}
+
+.str {
+  width: 100px;
+  text-align: center;
+  color: #c7def7;
+}
+
+.button1 {
+  align-self: center;
+  background-color: #697569; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button2 {
+  align-self: center;
+  background-color: #0099ff; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.dropbtn {
+  width: auto;
+  background-color: #000000; /* Green */
+  border: none;
+  color: white;
+  margin: 0% 30%;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 25px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.bodyh4 {
+  border-top: 0px;
+  margin-top: 0px;
+  padding: 30px;
+  background-color: rgb(78, 78, 78);
+  color: whitesmoke;
+}
+
+.friend11{
+  float: left;
+  width: auto;
+  align-content: center;
+  margin: 20px;
+  margin-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: black;
+  align-items: center;
+}
+
+.str11 {
+  width: auto;
+  text-align: center;
+  color: white;
+}
+
+.str11 h6{
+  margin: 5px;
+}
+
+.dropbtn11 {
+  width: auto;
+  background-color: #000000; /* Green */
+  border: none;
+  color: white;
+  margin: 0% 40%;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.main{
+  align-content: center;
+  align-self: center;
+}
+
+
+
+
+/*------------------------------- uploaded pics-------------------------------- */
+
+.down-cont {
+  width: 100%;
+  /* background-color: aqua;s */
+  display: flex;
+  flex-direction: row;
+}
+.tabcontainer {
+  width: 75%;
+  height: 500px;
+}
+
+.tabcontainer .buttoncontainer {
+  margin-top: 10px;
+  height: 15%;
+}
+
+.tabcontainer .buttoncontainer button {
+  width: 23%;
+  height: 100%;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  
+}
+
+.tabcontainer .buttoncontainer button:hover {
+  background-color: black;
+  color: whitesmoke;
+}
+
+/* ---------------------------panel------------------------- */
+
+.tabcontainer .tabpanel {
+  height: max-content;
+  /* background-color: brown; */
+  color: aliceblue;
+  box-sizing: border-box;
+  display: none;
+  display: flexbox;
+  flex-direction: column;
+  /* overflow-y: scroll; */
+  height: 400px;
+  width: 100%;
+  /* background-color: blue; */
+  overflow-y: scroll;
+}
+
+.tabpanel .outside_container {
+  height: auto;
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: row;
+  /* flex-flow: column; */
+  /* float: left; */
+  flex-wrap: wrap;
+}
+
+.box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  /* overflow: hidden; */
+  /* overflow: scroll; */
+  /* overflow-y: scroll; */
+  /* vertical-align:  middle; */
+  /* flex-direction: column; */
+}
+
+.con {
+  background-color: black;
+  border: 1px solid rgb(26, 25, 25);
+  margin-left: 70px;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 40px;
+  width: 230px;
+  height: 180px;
+  
+  /* display: flex;
+    flex-direction: column; */
+}
+.img-class:hover
+{
+  cursor: pointer;
+}
+
+.img-class {
+  width: 100%;
+  height: 100%;
+}
+/* .foot
+{
+    /* position: absolute; */
+/* overflow: scroll; */
+
+.max-pic {
+  margin-top: 10px;
+  width: 24%;
+  height: 48%;
+  border-color: black;
+  /* justify-content: center;
+    justify-items: center; */
+  /* background-color: blueviolet;  */
+  /* display: flex;
+    flex-direction: column;
+    overflow-y: scroll; */
+}
+.text-max {
+  text-align: center;
+  border-color: aquamarine;
+  color: black;
+  height: 4%;
+  vertical-align: middle;
+}
+
+.max-pic-cont {
+  /* margin-left: ; */
+  margin-left: 30px;
+  margin-top: 45px;
+  /* justify-content: center; */
+  display: flexbox;
+  flex-direction: column;
+  /* overflow-y: scroll; */
+  height: 250px;
+  width: 80%;
+  /* background-color: blue; */
+  overflow-y: scroll;
+}
+
+.friendOptionsBtn {
+  background-color: #d88994;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.friendOptions {
+  position: relative;
+  display: inline-block;
+  margin-right: 3rem;
+}
+
+.friendOptions-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  /* min-width: 160px; */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.friendOptions-content a {
+  color: black;
+  /* padding: 12px 16px; */
+  text-decoration: none;
+  display: block;
+}
+
+.friendOptions-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.friendOptions:hover .friendOptions-content {
+  display: block;
+}
+
+.friendOptions:hover .friendOptionsBtn {
+  background-color: #cc6673;
+}
+
+.removeBtn {
+  width: 100%;
+  padding: 0.5rem 1.3rem;
+  background: white;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+/*
+.removeBtn:focus {
+  outline: none;
+} */
+
+
+
+/**************************friends list modal*************************/
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #919191;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  width: 25%;
+  height: auto;
+  max-height: 50%;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.friendbox{
+  display: flexbox;
+  height: 300px;
+  width: 100%;
+  max-height: 40%;
+  flex-direction: column;
+  overflow-y: scroll;
+  color: white;
+}
+
+/* The Close Button */
+.close {
+  color: #000000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.user_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.profile_img {
+  width: 2rem;
+  border-radius: 100%;
+  margin-right: 0.8rem;
+}
+
+.send-btn {
+  background-color: #4caf50;
+  padding: 1rem;
+  border: none;
+  color: white;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+
+/* ********************************** for edit profile ************************************** */
+
+.modal2{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx edit profle xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+.button1  { 
+  background-color: rgb(78, 78, 78) ;
+  /* rgb(78, 78, 78)
+#697569 */
+border: none;
+color: white;
+margin: 100%;
+padding: 16px 32px;
+align-self: center;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
+}
+.upload 
+{
+  background-color: #2f2cd3;
+border: none;
+color: white;
+margin: 100%;
+padding: 16px 32px;
+align-self: center;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
+}
+
+
+/* --------------------zoom image -----------------------------*/
+
+.user_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.post_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 0.9rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* height: 35px; */
+}
+
+.username {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.profile_img {
+  width: 2.7rem;
+  border-radius: 100%;
+  margin-right: 0.8rem;
+}
+
+.post_image {
+  width: 100%;
+  max-height: 40rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.post_footer {
+  padding: 0.7rem 0.9rem;
+}
+
+.icon,
+.icon-left {
+  font-size: 1.5rem;
+}
+
+.icon-left {
+  margin-right: 1rem;
+}
+
+.icons_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.left_icons {
+  justify-content: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --like-font-size: 10rem;
+}
+
+.post_likes {
+  margin: 0.7rem 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.post_content {
+  color: #262626;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.post_comments {
+  color: rgb(0, 0, 0);
+  font-size: 0.9rem;
+  padding: 0.8rem 0;
+}
+
+.separator {
+  border: 0;
+  border-top: 1px solid #d1d1d1;
+  height: 1px;
+}
+
+.comment_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 0.7rem 0.9rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* margin-bottom: 100px; */
+}
+
+
+.comment_form #comment {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  margin-right: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  resize: none;
+  padding: 0.5rem 0.9rem;
+  color: #262626;
+}
+
+.comment_form #comment:focus {
+  outline-width: 0;
+}
+
+.comment_form .post-btn {
+  padding: 0.3rem 0.5rem;
+  background-color: white;
+  border: none;
+  color: #8787f8;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.comment_form .post-btn:focus {
+  outline-width: 0;
+}
+
+.comment {
+  /* justify-content: center; */
+  display: flexbox;
+  flex-direction: column;
+  /* overflow-y: scroll; */
+  height: 240px;
+  width: 90%;
+  /* background-color: blue; */
+  overflow-y: scroll;
+}
+
+.fa-heart {
+  position: relative;
+  -webkit-text-stroke: 2px #000000;
+  color: rgb(255, 255, 255);
+  transition: all ease-in-out;
+  cursor: pointer;
+}
+
+.fa-comment {
+  position: relative;
+  -webkit-text-stroke: 2px #000000;
+  color: rgb(255, 255, 255);
+  transition: all ease-in-out;
+}
+.fa-paper-plane {
+  position: relative;
+  -webkit-text-stroke: 2px #000000;
+  color: rgb(255, 255, 255);
+  transition: all ease-in-out;
+}
+.fa-bookmark {
+  position: relative;
+  -webkit-text-stroke: 2px #000000;
+  color: rgb(255, 255, 255);
+  transition: all ease-in-out;
+}
+
+/* .like-btn:checked + .fa-heart{
+  color: red;
+  -webkit-text-stroke: 1px red;
+  animation: .5s linear burst; 
+} */
+
+.fa-heart.active {
+  color: red;
+  -webkit-text-stroke: 1px red;
+  animation: 0.5s linear burst;
+}
+
+.comment {
+  padding: 0 1rem;
+}
+
+.comment p {
+  margin: 1rem 0 1.3rem 0;
+  font-size: 1.1rem;
+}
+
+@keyframes burst {
+  0%,
+  10% {
+    transform: scale(1);
+    opacity: 0.5;
+    color: lavender;
+  }
+  45% {
+    transform: scale(0.2) rotate(30deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(2) rotate(-37.5deg);
+    opacity: 1;
+    color: red;
+    text-shadow: 2px 2px 6px rgba(235, 9, 9, 0.5);
+  }
+  90%,
+  95% {
+    transform: scale(1) rotate(10deg);
+    text-shadow: none;
+  }
+  100% {
+    transform: rotate(-2.5deg);
+  }
+}
+
+/* 
+// from welcome for zoom */
+
+
+/* added */
+.commentZoom {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  margin-right: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  resize: none;
+  padding: 0.5rem 0.9rem;
+  color: #262626;
+  background: white;
+}
+
+.commentZoom:focus {
+  outline-width: 0;
+}
+
+.post-btn-zoom {
+  padding: 0.3rem 0.5rem;
+  background-color: white;
+  border: none;
+  color: #8787f8;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* xxx */
+/* 
+
+
+
+ **************************************delete post********************************************************* */
+.fa-ellipsis-h_div1 {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-remove-post{
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown-content-zoom {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.report_post {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.delete_post{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.delete_post.remove {
+   display: none;
+  }
+
+.dropdown-content-zoom a:hover {background-color: #ddd;}
+
+.dropdown-content-zoom.added {
+  display: block;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; 
+}
+
+.fa-ellipsis-h_div1:hover .icon-remove-post {background-color: #cfcfcf;}
+
+/* xxxxxxxxxxxxxxxxx delete post xxxxxxxxxxxxxxxxx */
+
+/* new scrollbar added */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #919191;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(48, 48, 48);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+} 
+
+
+
+.max-con
+{
+  margin-left: 10px;
+  padding-left: 0px;
+  /* width: 10px; */
+  
+}

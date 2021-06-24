@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Socomon</title>
+<link rel="stylesheet" href="/css/index.css">
+
+</head>
+<body bgcolor = "#000033">
+<div>
+
+
+<form action="/auth/register" method="POST">
+<h2>Registration Form</h2>
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+    
+    {{!-- <script src="pass.js"></script> --}}
+    
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required id="password" onkeyup='check();'>
+    
+    <label for="confirm_password"><b>Confirm Password</b></label>
+    <input type="password" placeholder="Enter Password" name="confirmpassword" required id="confirm_password" onkeyup='check();'>
+    <span id='message'></span><br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>   
+    <button type="submit" class="Register">Register</button>
+     <hr>
+    <h4>If you have registered successfully, then Please go to Login page.</h4> 
+    <button type="button" onclick="document.location='/login'">Login</button>
+  </div>
+</form>
+
+{{#if message}}
+   <h1>{{message}}</h1>
+
+{{/if}}
+</div>
+</body>
+
+</html>

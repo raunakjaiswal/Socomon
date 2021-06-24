@@ -1,0 +1,15 @@
+.body{
+    background-color: blue;
+}
+
+.button1{
+    background-color: #4CAF50;
+  border: none;
+  color: white;
+  margin: 100%;
+  padding: 16px 32px;
+  align-self: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}

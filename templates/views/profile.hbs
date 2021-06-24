@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socomon</title>
+    <link rel="stylesheet" href="/css/profile.css">
+         {{!-- ******************************************** added ************************************* --}}
+    <link rel="stylesheet" href="/css/modal_com.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    {{!-- upto this --}}
+
+</head>
+<body>
+    <nav>
+
+    <div class="navprofile">
+        <button class="button7" onclick="goBack()">Go Back</button>
+        <div class="arrow">
+             <div class="username">
+               <h1>{{items.user_name}} </h3>
+             </div> 
+        </div>
+       <div class="belowarraw">
+          <div class="circular--landscape">
+          {{!-- <img src="img/raunak.png" /> --}}
+           <img src="data:image/png;base64,{{items.Profile_pic}}"/>
+           </div>
+           <div>
+            <div class="row">
+             <div class="friend" onclick="friendlist({{items.user_id}})">
+               <div class="str">
+                 <h4>Friends</h4>
+               </div>
+             <div class="dropdown">
+                <a class="dropbtn" id="myButton">{{total_friend}}</a>
+                <div id="myDropdown" class="dropdown-content">
+                  <a>hello</a>
+                </div>
+              </div> 
+             </div>
+
+             <div class="friend">
+               <div class="str">
+                 <h4>Posts</h4>
+               </div>
+             <div class="dropdown">
+                <a class="dropbtn" id="myButton">{{count_cat.total_post_count}}</a>
+              </div> 
+             </div>
+            </div>             
+
+              
+            <div>
+               <div class="friend11">
+                   <div class="str11">
+                    <h6>Fashion</h6>
+                    </div>
+                  <div>
+                    <a class="dropbtn11" id="myButton">{{count_cat.fashion_count}}</a>
+                  </div> 
+                 </div>
+
+                  <div class="friend11">
+                     <div class="str11">
+                     <h6>Photography</h6>
+                    </div>
+                    <div>
+                     <a class="dropbtn11" id="myButton">{{count_cat.photography_count}}</a>
+                    </div> 
+                  </div>
+
+                  <div class="friend11">
+                      <div class="str11">
+                      <h6>Art & Craft</h6>
+                      </div>
+                      <div>
+                       <a class="dropbtn11" id="myButton">{{count_cat.artandcraft_count}}</a>
+                     </div> 
+                  </div>
+
+                   <div class="friend11">
+                       <div class="str11">
+                       <h6>Quotes</h6>
+                        </div>
+                    <div>
+                       <a class="dropbtn11" id="myButton">{{count_cat.cooking_count}}</a>
+                   </div> 
+                  </div>
+            </div>
+              
+
+            {{!-- <div>
+                  <label> friends</label> 
+                 <button class="dropbtn" style="vertical-align:middle"><span>friends</span></button>
+             </div>
+           </div>--}}
+          
+       </div>
+       <div class="btn">
+          
+           <button class="button2" id="{{items.user_name}}" onclick="makefriend()">{{friend }}</button>
+       {{!-- <button type="button" onclick="document.location='editprofile'">Edit Profile</button> --}}
+       
+        <div class="friendOptions">
+       <button class="friendOptionsBtn"><i class="fas fa-ellipsis-h"></i></button>
+       <div class="friendOptions-content">
+        <button class="removeBtn" id="{{items.user_name}}" onclick="removefriend()">Remove Friend</button>
+       </div>
+       </div>
+       
+        {{!-- <button class="button1" onclick="document.location='/editprofile'"> Edit Profile </button> --}}
+      
+       <button class="send-btn" onclick="checksendmessage({{items.user_id}})">Send Message</button>   
+     
+  </div>
+</div>
+       </div>
+    </div>
+    </nav>
+
+
+    {{!--------------------------------- uploded things --------------------------------}}
+    <div class="down-cont">
+
+      <div class="tabcontainer">
+         <div class="buttoncontainer">
+            <button onclick="Showpanel(0,'#4e4e4e')" > fashion</button>
+            <button onclick="Showpanel(1,'#4e4e4e')" > photography</button>
+            <button onclick="Showpanel(2,'#4e4e4e')" > Art and craft</button>
+            <button onclick="Showpanel(3,'#4e4e4e')" > Quotes</button>
+        </div>
+
+           <div class="tabpanel"> 
+             <div class="box">
+                <!-- <div class="contain">
+        
+                </div> -->
+                <div class="outside_container"> 
+                       <!-- <div class="cont"> -->
+
+                         {{#each fashion }}
+
+                          <div class="con"  onclick="showpostprofile(this,{{json this.post_id}})">
+                                 <!-- <h1>hello</h1> -->
+                                 <img  class="img-class" src="data:image/png;base64,{{this.post_data}}" alt="">
+                           </div>
+                         {{/each}}
+                         
+                          
+                       </div>
+                 </div>
+           </div>
+
+
+           {{!-- ------------2nd tebpanel start------------- --}}
+
+           
+           <div class="tabpanel"> 
+             <div class="box">
+                <!-- <div class="contain">
+        
+                </div> -->
+                <div class="outside_container"> 
+                       <!-- <div class="cont"> -->
+
+
+                           {{#each photography }}
+
+                          <div class="con" onclick="showpostprofile(this,{{json this.post_id}})">
+                                 <!-- <h1>hello</h1> -->
+                                 <img class="img-class" src="data:image/png;base64,{{this.post_data}}" alt="">
+                           </div>
+                         {{/each}}
+                          
+                           
+                       </div>
+                <!-- </div> -->
+              
+              </div>
+             
+
+        </div>
+
+        {{!------------- 3rd tabpanel ------------ --}}
+        
+           <div class="tabpanel"> 
+             <div class="box">
+                <!-- <div class="contain">
+        
+                </div> -->
+                <div class="outside_container"> 
+                       <!-- <div class="cont"> -->
+                           {{#each art }}
+
+                          <div class="con"  onclick="showpostprofile(this,{{json this.post_id}})">
+                                 <!-- <h1>hello</h1> -->
+                                 <img class="img-class" src="data:image/png;base64,{{this.post_data}}" alt="">
+                           </div>
+                         {{/each}}
+                           
+                           
+                       </div>
+                <!-- </div> -->
+              
+              </div>
+             
+
+        </div>
+
+        {{!-- 4th tabpanel ---------------------- --}}
+        
+           <div class="tabpanel"> 
+             <div class="box">
+                <!-- <div class="contain">
+        
+                </div> -->
+                <div class="outside_container"> 
+                       <!-- <div class="cont"> -->
+                           {{#each cooking }}
+
+                          <div class="con"  onclick="showpostprofile(this,{{json this.post_id}})">
+                                 <!-- <h1>hello</h1> -->
+                                 <img class="img-class" src="data:image/png;base64,{{this.post_data}}" alt="">
+                           </div>
+                         {{/each}}
+                           
+                           
+                       </div>
+                <!-- </div> -->
+              
+              </div>
+             
+
+        </div>
+      </div>
+
+
+      <div class="max-pic">
+             <div class="text-max">
+              <h4 class="bodyh4" >post with max like</h4>
+             </div>
+       
+  
+               <div  class="max-pic-cont">
+               {{#each maxPic}}
+               <div class="con max-con" >
+                            <!-- <h1>hello</h1> -->
+                            <img class="img-class" src="data:image/png;base64,{{this.post_data}}" alt="MaxLike-Img">
+                 </div>
+              {{/each}}       
+            </div>
+      </div>
+            {{!--**************** friend list modal is here ********************--}}
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 style="margin-top: 5px; margin-bottom: 0px; text-align: center;">Friends</h3>
+          <hr>
+          <div class="friendbox">
+      
+          </div>
+        </div>
+      </div>
+       {{!-- end here --}}
+
+        
+       {{!-- ****************************** modal for the post zoom ******************************* --}}
+
+       <div id="modal" class="modal1">
+            <span class="close1" id="close">&times;</span>
+            <div class="mix">
+            <img class="modal-content1" alt="">
+            <div class="vcomm">
+              <div class="post_card1">
+        <div class="post_header">
+          <div class="user_info">
+            <img
+              class="profile_img"
+              src="/img/default.jpg"
+              alt="Profile Image"
+            />
+            <h2 class="username_post_zoom">User</h2>
+          </div>
+      {{!-- ********************************* delete post added******************************************** --}}
+          <div class="fa-ellipsis-h_div1" onclick="checkDelete({{items.user_id}})">
+            <i class="fas fa-ellipsis-h icon-remove-post"></i>
+            <div class="dropdown-content-zoom" id="dropdown-content-zoom">
+              <a class="delete_post" id="delete" onclick="deletepost()">Delete</a>
+              <a class="report_post">Report</a>
+            </div>
+          </div>
+          {{!-- ********************************* delete post added******************************************** --}}
+        </div>
+        <hr class="separator" />
+        
+        <div class="comment">
+
+          {{!-- comment for each post --}}
+          {{!-- dummy user for each post --}}
+          {{!-- <div class="user_info"> --}}
+            {{!-- <img
+              class="profile_img"
+              src="img/default.jpg"
+              alt="Profile Image"
+            /> --}}
+            {{!-- <h2 class="username" style=""> User:</h2>
+             <p>Lorem ipsum dolor sit amet</p> --}}
+          </div>
+          
+        </div>
+        <hr class="separator" />
+        <div class="post_footer">
+          <div class="icons_container">
+            <div class="left_icons">
+              {{!-- <input type="checkbox" class="btn_exp like-btn"  data-post-id="{{this.post_id}}"> --}}
+              {{!-- <i class="icon-left fa fa-heart fa-lg" ></i> --}}
+            
+                       
+               {{!-- <i class=" icon-left fa fa-heart fa-lg" id="heart" onclick="changecolor1({{this.post_id}})"></i>
+              <i class="icon-left fa fa-paper-plane fa-lg"></i> --}}
+                <i class=" icon-left fa fa-heart fa-lg" id="heart-zoom"></i>
+            </div>
+              {{!-- {{#if}}
+                  <script>
+                    var tss = "heart"+{{this.post_id}}
+                    var color1 = document.getElementById(tss);
+                    color1.classList.add("active");
+                  </script>
+                
+                {{else}}
+                   <script>
+                     var tss = "heart"+{{this.post_id}}
+                    var color1 = document.getElementById(tss);
+                    color1.classList.remove("active");
+                  </script>
+              {{/if}}  --}}
+            {{!-- <div class="right_icons">
+              <i class="fa fa-bookmark fa-lg"></i>
+            </div> --}}
+          </div>
+
+
+         
+          <h3 class="post_likes">0 likes</h3>     
+        </div>
+        <hr class="separator" />
+        <div class="comment_form">
+          <i class="icon far fa-smile"></i>
+          <input type="text" class="commentZoom" id="commentInputZoom" placeholder="Add a comment..." />
+          <button class="post-btn-zoom" onclick="addCommentZoom()">Post</button>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
+
+    </div>
+       
+       {{!-- end here --}}
+
+    </div>
+
+     <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+
+    <script src="/js/suggestion.js"></script>
+    <script src="/js/profile.js"></script>
+     
+</body>
+</html>
