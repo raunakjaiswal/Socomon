@@ -1,6 +1,7 @@
 
 # Socomon
 Social Media
+
 Build this application in oreder to expore mysql database(DBMS) project
 
 ![Screenshot (2480)](https://user-images.githubusercontent.com/65062751/123727815-df2bd400-d8af-11eb-892e-b1f20e41fb54.png)
